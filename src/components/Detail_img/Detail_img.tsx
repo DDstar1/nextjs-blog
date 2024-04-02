@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { CiSquareRemove } from "react-icons/ci";
 
-function Detail_img({ src }) {
+function Detail_img({ src }: { src: string }) {
   const [scaled, setScaled] = useState(false);
 
   const toggleScale = () => {

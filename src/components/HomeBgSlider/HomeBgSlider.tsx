@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-function HomeBgSlider({ srcs }) {
+function HomeBgSlider({ srcs }: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ function HomeBgSlider({ srcs }) {
 
   return (
     <>
-      {srcs.map((src, index) => (
+      {srcs.map((src: any, index: any) => (
         <Image
           key={index}
           className="-z-10 grayscale-[50%]"

@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 
-export default function CommentForm({ topicSlug, subtopicId }) {
-  const [error, setError] = useState(null); // State to track error
+export default function CommentForm({ topicSlug, subtopicId }: any) {
+  const [error, setError] = useState<string | null>(null); // State to track error
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault(); // Prevent the default form submission
 
     // Get form data
@@ -24,7 +24,7 @@ export default function CommentForm({ topicSlug, subtopicId }) {
         alert("Data posted successfully!");
         // Optionally, you can redirect or perform any other action on success
       }
-    } catch (error) {
+    } catch (error: any) {
       setError("Network error occurred."); // Set error state
       console.error("Error posting data:", error.message);
     }

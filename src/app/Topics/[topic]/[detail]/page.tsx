@@ -36,7 +36,7 @@ export default async function Detail({
         <hr />
         <div className="flex ">
           <section className="bg-blue-200">
-            {sub_topics_detail.map((detail) => {
+            {sub_topics_detail.map((detail: any) => {
               return (
                 <div key={detail.key} className="overflow-hidden p-3">
                   <Detail_img src={detail.image} />
@@ -89,7 +89,7 @@ export default async function Detail({
         <div className="w-auto  bg-red-200 z-20">
           <h2 className="text-center">Comment Section</h2>
           <hr />
-          {sub_topics_comments.map((comment: string) => {
+          {sub_topics_comments.map((comment: any) => {
             return (
               <div className="p-2" key={comment.key}>
                 <div className="flex justify-around align-bottom">

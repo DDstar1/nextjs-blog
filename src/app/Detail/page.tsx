@@ -14,7 +14,6 @@ export default function Detail() {
       <div className="flex ">
         <section className="bg-blue-200">
           <div>
-            <img src="fish.jpeg" className="float-left m-3 w-32 h-32" alt="" />
             <p>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
@@ -32,7 +31,6 @@ export default function Detail() {
           </div>
           <br />
           <div>
-            <img src="fish.jpeg" className="float-left m-3 w-32 h-32" alt="" />
             <p>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by

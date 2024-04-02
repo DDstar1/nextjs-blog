@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  .text-balance {
+    text-wrap: balance;
+  }
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-center text-2xl p-2 font-bold;
+  }
+  h3 {
+    @apply text-lg font-medium italic;
+  }
+  .aboutFigure {
+    @apply border-gray-300 flex flex-col p-5 w-[300px];
+  }
+  .aboutFigureDivImage {
+    @apply aspect-square w-full overflow-hidden relative;
+  }
+  .aboutFigureImage {
+    @apply hover:scale-125 transform transition duration-500;
+  }
+
+  .aboutFigureCaption {
+    @apply bg-gray-800 text-white italic p-3 w-full text-center aspect-square overflow-scroll;
+  }
+}

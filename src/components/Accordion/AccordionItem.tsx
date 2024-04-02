@@ -5,16 +5,16 @@ import { IoMdAddCircleOutline } from "react-icons/io";
 import { FiMinusCircle } from "react-icons/fi";
 import { Collapse } from "react-collapse";
 
-function AccordionItem({ faqs }) {
+function AccordionItem({ faqs }: any) {
   const [isOpen, setIsOpen] = useState(null);
 
-  const toggleItem = (index) => {
+  const toggleItem = (index: any) => {
     setIsOpen(index == isOpen ? null : index);
   };
 
   return (
     <div>
-      {faqs.map((data, index) => {
+      {faqs.map((data: any, index: any) => {
         return (
           <div
             className="p-5 px-10 cursor-pointer"

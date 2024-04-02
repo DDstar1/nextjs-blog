@@ -13,7 +13,11 @@ import Script from "next/script";
 import bg2 from "../../../../../public/img/me2.jpg";
 import { CiSquareRemove } from "react-icons/ci";
 
-export default async function Detail({ params: { topic, detail } }) {
+export default async function Detail({
+  params: { topic, detail },
+}: {
+  params: { topic: string; detail: string };
+}) {
   const sub_topics_detail = await get_topics_detail(topic, detail);
   const sub_topics_comments = await get_topics_comments(topic, detail);
   const nav_itm = "py-10 w-full text-center";
@@ -85,7 +89,7 @@ export default async function Detail({ params: { topic, detail } }) {
         <div className="w-auto  bg-red-200 z-20">
           <h2 className="text-center">Comment Section</h2>
           <hr />
-          {sub_topics_comments.map((comment) => {
+          {sub_topics_comments.map((comment: string) => {
             return (
               <div className="p-2" key={comment.key}>
                 <div className="flex justify-around align-bottom">

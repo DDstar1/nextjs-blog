@@ -4,7 +4,11 @@ import SearchBar from "@/components/searchBar/SearchBar";
 import get_sub_topics from "@/api_requests/get_sub_topics";
 import Link from "next/link";
 
-export default async function Topics({ params: { topic } }) {
+export default async function Topics({
+  params: { topic },
+}: {
+  params: { topic: string };
+}) {
   const sub_topics = await get_sub_topics(topic);
   return (
     <div>

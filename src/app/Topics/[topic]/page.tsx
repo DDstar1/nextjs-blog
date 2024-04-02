@@ -18,11 +18,11 @@ export default async function Topics({ params: { topic } }) {
       <div className="flex text-center flex-wrap">
         {sub_topics.map((sub_topic: any) => {
           return (
-            <Link href={`/Topics/${sub_topic.topic}/${sub_topic.id}`}>
-              <figure
-                key={sub_topic.id}
-                className="border-gray-300 flex flex-col p-5 mx-auto hover:scale-105"
-              >
+            <Link
+              key={sub_topic.id}
+              href={`/Topics/${sub_topic.topic}/${sub_topic.id}`}
+            >
+              <figure className="border-gray-300 flex flex-col p-5 mx-auto hover:scale-105">
                 <Image
                   className="grayscale-[50%] -z-10 w-full aspect-square"
                   width={200}

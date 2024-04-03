@@ -3,7 +3,7 @@ export default async function get_topics_detail(
   detail_slug: string
 ) {
   const response = await fetch(
-    `http://127.0.0.1:8000/api/topic/${topic_slug}/${detail_slug}/comments`,
+    `https://oseseo.pythonanywhere.com/api/topic/${topic_slug}/${detail_slug}/comments`,
     {
       cache: "no-cache",
     }

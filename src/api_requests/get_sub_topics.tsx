@@ -1,6 +1,6 @@
 export default async function getTopics(topic_slug: string) {
   const response = await fetch(
-    `http://127.0.0.1:8000/api/topic/${topic_slug}`,
+    `https://oseseo.pythonanywhere.com/api/topic/${topic_slug}`,
     {
       cache: "no-cache",
     }

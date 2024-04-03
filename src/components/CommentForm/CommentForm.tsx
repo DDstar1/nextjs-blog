@@ -13,7 +13,7 @@ export default function CommentForm({ topicSlug, subtopicId }: any) {
     // Send POST request to backend
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/topic/${topicSlug}/${subtopicId}/comments`,
+        `https://oseseo.pythonanywhere.com/api/topic/${topicSlug}/${subtopicId}/comments`,
         {
           method: "POST",
           body: formData,

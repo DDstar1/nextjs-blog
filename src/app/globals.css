@@ -42,4 +42,18 @@
   .aboutFigureCaption {
     @apply bg-gray-800 text-white italic p-3 w-full text-center aspect-square overflow-scroll;
   }
+  .animate-bounce-side {
+    animation: sidebounce 1s infinite;
+  }
+  @keyframes sidebounce {
+    0%,
+    100% {
+      transform: translateX(-20%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateX(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
 }

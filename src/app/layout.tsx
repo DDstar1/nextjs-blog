@@ -4,14 +4,10 @@ import Script from "next/script";
 import "./globals.css";
 import Link from "next/link";
 import getTopics from "@/api_requests/get_topics";
+import My_nav from "@/components/My_nav/My_nav";
 
 // import ""
-import {
-  FaInstagramSquare,
-  FaLinkedin,
-  FaFacebook,
-  FaArrowRight,
-} from "react-icons/fa";
+import { FaInstagramSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,13 +21,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const nav_itm = "py-10 w-full text-center hover:bg-gray-400 cursor-pointer";
   const django_topics = await getTopics();
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Script
+        {/* <Script
           src="/js/jquery-3.7.1.min.js"
           id="jquery_min"
           strategy="beforeInteractive"
@@ -40,47 +35,10 @@ export default async function RootLayout({
           id="nav_bar"
           src="/js/navbar_animate.js"
           strategy="beforeInteractive"
-        />
-        <main className="flex">
-          <nav className="z-30 w-28 h-screen items-center fixed top-0 left-0 bg-gray-200 ">
-            <Link href={"/"}>
-              <div className={`${nav_itm}`}>Home</div>
-            </Link>
-            <div
-              id="topics"
-              className={`${nav_itm} flex items-start justify-around 
-            `}
-            >
-              <span className="items-center">Topics</span>
-
-              <FaArrowRight id="arrow" className="hidden" />
-              <span
-                id="all_topics"
-                className="fixed flex flex-col text-left px-2 bg-gray-400 left-28 invisible"
-              >
-                {django_topics.map((topic: any) => {
-                  return (
-                    <Link
-                      key={topic.id}
-                      className="py-5 hover:bg-gray-200 w-full"
-                      href={`/Topics/${topic.slug}`}
-                    >
-                      <span className="border-b-4 pb-1"> {topic.name}</span>
-                    </Link>
-                  );
-                })}
-                {/* <span className="py-5  border-b-4">cybersecurity</span>
-                <span className="py-5 border-b-4">mql5/trading</span>
-                <span className="py-5 border-b-4">projects</span>
-                <span className="py-5 border-b-4">Apps</span> */}
-              </span>
-            </div>
-            <Link href={"/About"}>
-              <div className={`${nav_itm}`}>About</div>
-            </Link>
-            <div className={`${nav_itm}`}>Chat Room</div>
-          </nav>
-          <section className="w-[calc(100%-theme('spacing.28'))] ml-28 flex-wrap">
+        /> */}
+        <main className="flex relative">
+          <My_nav django_topics={django_topics} />
+          <section className="w-full flex-wrap">
             {children}
             <footer className="flex justify-between align-middle bg-yellow-200 p-3">
               <span className="flex text-center">Contact me @</span>
@@ -96,3 +54,5 @@ export default async function RootLayout({
     </html>
   );
 }
+
+//  w-28   ml-28

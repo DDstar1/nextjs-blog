@@ -19,7 +19,7 @@ export default async function Topics({
       </h1>
       <hr />
 
-      <div className="flex text-center flex-wrap">
+      <div className="flex text-center flex-wrap justify-center">
         {sub_topics.map((sub_topic: any) => {
           return (
             <Link

@@ -38,7 +38,7 @@ export default async function RootLayout({
         /> */}
         <main className="flex relative">
           <My_nav django_topics={django_topics} />
-          <section className="w-full overflow-auto">
+          <section className="w-full overflow-x-clip">
             {children}
             <footer className="flex justify-between align-middle bg-yellow-200 p-3">
               <span className="flex text-center">Contact me @</span>

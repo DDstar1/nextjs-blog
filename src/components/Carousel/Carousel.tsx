@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function Carousel({ suggestions }) {
+function Carousel({ suggestions }: any) {
   const settings = {
     dots: true,
     infinite: true,

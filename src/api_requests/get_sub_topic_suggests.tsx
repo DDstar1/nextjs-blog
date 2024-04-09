@@ -5,7 +5,8 @@ export default async function get_topics_suggestions(
   const response = await fetch(
     `https://www.pythonanywhere.com/api/topic/${topic_slug}/${detail_slug}/suggestions`,
     {
-      cache: "no-cache",
+      credentials: "include",
+      cache: "no-store",
     }
   );
 

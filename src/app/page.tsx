@@ -19,24 +19,6 @@ export default function Home() {
           <HomeTextSlider />
         </div>
       </div>
-
-      {/* <div className="flex items-center">
-        <section className="flex-1 bg-red-200 items-center text-center">
-          <span>Most Recent</span>
-          <div className="flex ">
-            <p className="h-[100px] flex-grow">bjdckanckaksckasb</p>
-            <div className="basis-1/4  bg-white"></div>
-          </div>
-        </section>
-
-        <section className="flex-1 bg-green-200 items-center text-center">
-          <span>Most Viewed</span>
-          <div className="flex ">
-            <p className="h-[100px] flex-grow">bjdckanckaksckasb</p>
-            <div className="-1/4 bg-white"></div>
-          </div>
-        </section>
-      </div> */}
     </div>
   );
 }

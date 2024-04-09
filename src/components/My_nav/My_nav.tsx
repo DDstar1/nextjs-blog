@@ -36,8 +36,8 @@ function My_nav({ django_topics }: any) {
           }`}
         >
           <div className={`h-auto items-center bg-gray-200 flex flex-col`}>
-            <Link href={"/"}>
-              <div className={`${nav_itm}`}>Home</div>
+            <Link className={`${nav_itm}`} href={"/"}>
+              Home
             </Link>
             <div onClick={toggleTopic} className={`${nav_itm} flex flex-col`}>
               <div className="flex justify-around items-center">
@@ -67,14 +67,14 @@ function My_nav({ django_topics }: any) {
                 })}
               </div>
             </div>
-            <Link href={"/About"}>
-              <div className={`${nav_itm}`}>About</div>
+            <Link className={`${nav_itm}`} href={"/About"}>
+              About
             </Link>
             <div className={`${nav_itm}`}>Chat Room</div>
           </div>
         </div>
         <div
-          className="p-1 rounded-r-full bg-slate-50/75 md:hidden"
+          className="p-1 rounded-r-full bg-slate-50/75 md:hidden cursor-pointer"
           onClick={toggleNav}
         >
           {navOpen ? (

@@ -30,7 +30,7 @@ function HomeTextSlider() {
       {allText.map((text, index) => (
         <div
           key={index}
-          className={`fixed bg-white p-3 w-52 z-20 top-1/2 left-1/2 md:!left-[calc(50%+59px)] -translate-x-1/2 -translate-y-1/2 transform duration-[2000ms] rotate-y-90 ${
+          className={`fixed rounded-lg bg-white p-3 w-52 z-20 top-1/2 left-1/2 md:!left-[calc(50%+59px)] -translate-x-1/2 -translate-y-1/2 transform duration-[2000ms] rotate-y-90 ${
             index === currentIndex ? "!rotate-y-0" : "invisible"
           }`}
         >

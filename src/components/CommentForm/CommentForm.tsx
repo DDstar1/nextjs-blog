@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-export default function CommentForm({ topicSlug, subtopicId }: any) {
+export default function CommentForm({ topicSlug, subtopicSlug }: any) {
   const [error, setError] = useState<string | null>(null); // State to track error
 
   const handleSubmit = async (e: any) => {
@@ -13,7 +13,7 @@ export default function CommentForm({ topicSlug, subtopicId }: any) {
     // Send POST request to backend
     try {
       const response = await fetch(
-        `https://oseseo.pythonanywhere.com/api/topic/${topicSlug}/${subtopicId}/comments`,
+        `http://127.0.0.1:8000/api/topic/${topicSlug}/${subtopicSlug}/comments`,
         {
           method: "POST",
           body: formData,
@@ -21,7 +21,8 @@ export default function CommentForm({ topicSlug, subtopicId }: any) {
       );
 
       if (response.ok) {
-        alert("Data posted successfully!");
+        console.log("Data posted successfully!");
+        alert("Comment posted successfully!");
         // Optionally, you can redirect or perform any other action on success
       }
     } catch (error: any) {
@@ -31,7 +32,7 @@ export default function CommentForm({ topicSlug, subtopicId }: any) {
   };
 
   return (
-    <div>
+    <div className="px-2">
       {error && <div className="error">{error}</div>}
       {/* Display error div if error state is not null */}
       <form onSubmit={handleSubmit}>
@@ -43,7 +44,7 @@ export default function CommentForm({ topicSlug, subtopicId }: any) {
           name="subtopic"
           id="subtopic"
           hidden
-          value={subtopicId}
+          value={subtopicSlug}
         />
         <br />
         <label htmlFor="comment">Comment :</label>

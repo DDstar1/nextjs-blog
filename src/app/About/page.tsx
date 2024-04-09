@@ -1,5 +1,3 @@
-"use client";
-
 import { IoMdAddCircleOutline } from "react-icons/io";
 import Image from "next/image";
 import { FiMinusCircle } from "react-icons/fi";

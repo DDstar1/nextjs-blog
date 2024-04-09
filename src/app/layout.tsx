@@ -40,7 +40,7 @@ export default async function RootLayout({
           <My_nav django_topics={django_topics} />
           <section className="w-full overflow-x-clip">
             {children}
-            <footer className="flex justify-between align-middle bg-yellow-200 p-3">
+            <footer className="flex justify-between items-center bg-yellow-100 p-3">
               <span className="flex text-center">Contact me @</span>
               <span className="flex  justify-between">
                 <FaInstagramSquare size={30} className="inline-block mx-5" />

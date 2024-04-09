@@ -1,5 +1,5 @@
 export default async function getFaqs() {
-  const response = await fetch("http://127.0.0.1:8000/api/faqs", {
+  const response = await fetch("https://www.pythonanywhere.com/api/faqs", {
     cache: "no-cache",
   });
 

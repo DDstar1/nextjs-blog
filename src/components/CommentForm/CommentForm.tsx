@@ -13,7 +13,7 @@ export default function CommentForm({ topicSlug, subtopicSlug }: any) {
     // Send POST request to backend
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/topic/${topicSlug}/${subtopicSlug}/comments`,
+        `https://www.pythonanywhere.com/api/topic/${topicSlug}/${subtopicSlug}/comments`,
         {
           method: "POST",
           body: formData,

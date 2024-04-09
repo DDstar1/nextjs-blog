@@ -25,7 +25,7 @@ function SearchBar() {
     if (query != "") {
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/api/search/${query}`,
+          `https://www.pythonanywhere.com/api/search/${query}`,
           {
             method: "POST",
             body: formData,

@@ -3,7 +3,7 @@ export default async function get_topics_suggestions(
   detail_slug: string
 ) {
   const response = await fetch(
-    `http://127.0.0.1:8000/api/topic/${topic_slug}/${detail_slug}/suggestions`,
+    `https://www.pythonanywhere.com/api/topic/${topic_slug}/${detail_slug}/suggestions`,
     {
       cache: "no-cache",
     }

@@ -15,4 +15,4 @@ export default async function getTopics(topic_slug: string) {
   return data;
 }
 
-// https://www.pythonanywhere.com
+// https://www.pythonanywhere.co

@@ -1,9 +1,11 @@
+import { apiUrl } from "@/components/api";
+
 export default async function get_topics_detail(
   topic_slug: string,
   detail_slug: string
 ) {
   const response = await fetch(
-    `https://www.pythonanywhere.com/api/topic/${topic_slug}/${detail_slug}`,
+    `${apiUrl}/api/topic/${topic_slug}/${detail_slug}`,
     {
       cache: "no-cache",
     }

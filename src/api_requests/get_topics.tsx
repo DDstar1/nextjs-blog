@@ -1,10 +1,9 @@
+import { apiUrl } from "@/components/api";
+
 export default async function getTopics() {
-  const response = await fetch(
-    "https://www.pythonanywhere.com/api/blog_topics",
-    {
-      cache: "no-cache",
-    }
-  );
+  const response = await fetch(`${apiUrl}/api/blog_topics`, {
+    cache: "no-cache",
+  });
 
   if (!response.ok) {
     throw new Error("failed to fetch topics");

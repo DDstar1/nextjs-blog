@@ -1,6 +1,4 @@
-import { IoMdAddCircleOutline } from "react-icons/io";
 import Image from "next/image";
-import { FiMinusCircle } from "react-icons/fi";
 import AccordionItem from "@/components/Accordion/AccordionItem";
 import getFaqs from "@/api_requests/get_faqs";
 import me1 from "../../../public/img/me1.jpg";
@@ -8,6 +6,9 @@ import cyber from "../../../public/img/cybersecurity.jpg";
 import webdev from "../../../public/img/webdev.jpg";
 import mobile from "../../../public/img/mobiledev.jpg";
 import mql5 from "../../../public/img/mql5.jpg";
+
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 export default async function about() {
   const faqs = await getFaqs();
@@ -129,15 +130,19 @@ export default async function about() {
           </figcaption>
         </figure>{" "}
       </div>
+      {faqs ? (
+        <div className="flex justify-center flex-col text-center">
+          <h1 className="text-2xl font-bold ">Frequently Asked Questions</h1>
+          <p>
+            In this FAQ section you can find all the information about our
+            services
+          </p>
 
-      <div className="flex justify-center flex-col text-center">
-        <h1 className="text-2xl font-bold ">Frequently Asked Questions</h1>
-        <p>
-          In this FAQ section you can find all the information about our
-          services
-        </p>
-        <AccordionItem faqs={faqs} />
-      </div>
+          <AccordionItem faqs={faqs} />
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

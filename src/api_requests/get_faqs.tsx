@@ -1,5 +1,7 @@
+import { apiUrl } from "@/components/api";
+
 export default async function getFaqs() {
-  const response = await fetch("https://www.pythonanywhere.com/api/faqs", {
+  const response = await fetch(`${apiUrl}/api/faqs`, {
     cache: "no-cache",
   });
 

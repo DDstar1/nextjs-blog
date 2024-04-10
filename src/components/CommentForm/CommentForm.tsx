@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
+import { apiUrl } from "@/components/api";
+
 export default function CommentForm({ topicSlug, subtopicSlug }: any) {
   const [error, setError] = useState<string | null>(null); // State to track error
 
@@ -13,7 +15,7 @@ export default function CommentForm({ topicSlug, subtopicSlug }: any) {
     // Send POST request to backend
     try {
       const response = await fetch(
-        `https://www.pythonanywhere.com/api/topic/${topicSlug}/${subtopicSlug}/comments`,
+        `${apiUrl}/api/topic/${topicSlug}/${subtopicSlug}/comments`,
         {
           method: "POST",
           body: formData,

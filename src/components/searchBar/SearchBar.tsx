@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import { FaSearch } from "react-icons/fa";
 import { FcSearch } from "react-icons/fc";
+
+import { apiUrl } from "@/components/api";
 
 function SearchBar() {
   const [error, setError] = useState<string | null>(null); // State to track error
@@ -24,13 +25,10 @@ function SearchBar() {
     // Send POST request to backend
     if (query != "") {
       try {
-        const response = await fetch(
-          `https://www.pythonanywhere.com/api/search/${query}`,
-          {
-            method: "POST",
-            body: formData,
-          }
-        );
+        const response = await fetch(`${apiUrl}/api/search/${query}`, {
+          method: "POST",
+          body: formData,
+        });
 
         if (response.ok) {
           const data = await response.json();
@@ -76,7 +74,7 @@ function SearchBar() {
         </form>
       </div>
 
-      {/* <div className="bg-blue-400  p-3 w-fit flex flex-col align-center text-center my-1">
+      {/* <<div className="bg-blue-400  p-3 w-fit flex flex-col align-center text-center my-1">
         <div className="flex justify-between w-max border-b-2 border-gray-500">
           <span>Cybersecurity</span>
 

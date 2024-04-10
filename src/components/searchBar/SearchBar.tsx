@@ -15,19 +15,23 @@ function SearchBar() {
     setHideSearch(!hideSearch);
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault(); // Prevent the default form submission
 
+    let query;
+    try {
+      const formData = new FormData(e.currentTarget);
+      query = formData.get("query");
+    } catch (error: any) {
+      query = e.target.value;
+    }
     // Get form data
-    const formData = new FormData(e.currentTarget);
-    const query = formData.get("query");
 
     // Send POST request to backend
     if (query != "") {
       try {
         const response = await fetch(`${apiUrl}/api/search/${query}`, {
           method: "POST",
-          body: formData,
         });
 
         if (response.ok) {
@@ -49,23 +53,20 @@ function SearchBar() {
   return (
     <div
       className={`z-10 fixed top-3 transition-all ${
-        hideSearch ? "-right-56" : "right-2"
+        hideSearch ? "-right-64" : "right-2"
       }`}
     >
       <div className="relative flex items-center justify-center">
         <div
-          className="bg-white rounded-full p-2 cursor-pointer"
+          className="bg-white rounded-full p-2 cursor-pointer mr-1"
           onClick={toggleSearch}
         >
           <FcSearch size={25} />
         </div>
 
-        <form
-          onChange={handleSubmit}
-          onSubmit={handleSubmit}
-          className="relative m-0"
-        >
+        <form onSubmit={handleSubmit} className="relative m-0">
           <input
+            onChange={handleSubmit}
             name="query"
             type="text"
             className="shadow-2xl rounded-2xl p-4 text-center h-5 w-[90%] border-2 border-gray-300"
@@ -115,7 +116,7 @@ function SearchBar() {
             ))
           ) : queryResult ? (
             <center>
-              <div className="text-center w-36 bg-blue-100">
+              <div className="text-center w-36 bg-blue-100 rounded-2xl">
                 No results found.
               </div>
             </center>

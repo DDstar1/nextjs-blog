@@ -1,4 +1,4 @@
-export const apiUrl = "https://www.pythonanywhere.com";
+export const apiUrl = "https://oseseo.pythonanywhere.com";
 
 // http://127.0.0.1:8000
-// https://www.pythonanywhere.comm
+// https://oseseo.pythonanywhere.com/

@@ -11,7 +11,7 @@ function HomeBgSlider({ srcs }: any) {
       setCurrentIndex((prevIndex) =>
         prevIndex === srcs.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change the interval time (in milliseconds) as needed
+    }, 8000); // Change the interval time (in milliseconds) as needed
 
     return () => clearInterval(interval);
   }, [currentIndex]);

@@ -20,7 +20,7 @@ function HomeTextSlider() {
       setCurrentIndex((prevIndex) =>
         prevIndex === allText.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [currentIndex, allText.length]);

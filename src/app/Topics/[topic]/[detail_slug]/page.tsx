@@ -44,7 +44,7 @@ export default async function Detail({ params: { topic, detail_slug } }: any) {
                 return (
                   <Link
                     key={sub_topic.id}
-                    href={`/Topics/${sub_topic.topic}/${sub_topic.slug}`}
+                    href={`/topics/${sub_topic.topic}/${sub_topic.slug}`}
                   >
                     <div className="mb-3 capitalize">
                       {sub_topic.slug.replace(/-/g, " ")}

@@ -21,7 +21,7 @@ export default async function Topics({ params: { topic } }: any) {
               return (
                 <Link
                   key={sub_topic.id}
-                  href={`/Topics/${sub_topic.topic}/${sub_topic.slug}`}
+                  href={`/topics/${sub_topic.topic}/${sub_topic.slug}`}
                 >
                   <figure className="border-gray-300 flex flex-col p-5 mx-auto hover:scale-105">
                     <Image

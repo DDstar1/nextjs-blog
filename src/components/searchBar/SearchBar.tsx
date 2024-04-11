@@ -101,7 +101,7 @@ function SearchBar() {
             queryResult.map((result: any) => (
               <Link
                 key={result.id}
-                href={`/Topics/${result.topic_slug}/${result.subtopic_slug}`}
+                href={`/topics/${result.topic_slug}/${result.subtopic_slug}`}
                 className="hover:cursor-pointer"
               >
                 <div className=" w-72 overflow-x-scroll bg-blue-100  p-3  flex flex-col align-center text-center my-1 rounded-3xl">

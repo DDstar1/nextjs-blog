@@ -59,7 +59,7 @@ function My_nav({ django_topics }: any) {
                     <Link
                       key={topic.id}
                       className="py-5 hover:bg-gray-200 w-full"
-                      href={`/Topics/${topic.slug}`}
+                      href={`/topics/${topic.slug}`}
                     >
                       <span className="border-b-4 pb-1"> {topic.name}</span>
                     </Link>
@@ -67,10 +67,10 @@ function My_nav({ django_topics }: any) {
                 })}
               </div>
             </div>
-            <Link className={`${nav_itm}`} href={"/About"}>
+            <Link className={`${nav_itm}`} href={"/about"}>
               About
             </Link>
-            <div className={`${nav_itm}`}>Chat Room</div>
+            {/* <div className={`${nav_itm}`}>Chat Room</div> */}
           </div>
         </div>
         <div

@@ -26,14 +26,14 @@ export default async function about() {
         />
 
         <div>
-          <h2>Welcome to DTech!</h2>
+          <h2>Welcome to DTech Blogosphere!</h2>
           <p>
-            At DTech, I'm passionate about showcasing the endless possibilities
-            of technology and inspiring others to explore its fascinating world
-            – I'm on a mission to make coding and automation not just
-            accessible, but downright enjoyable. cause at the end, with
-            technology, individuals can turn their wildest ideas into reality
-            with lightning speed.
+            Here, I'm passionate about showcasing the endless possibilities of
+            technology and inspiring others to explore its fascinating world –
+            I'm on a mission to make coding and automation not just accessible,
+            but downright enjoyable. cause at the end, with technology,
+            individuals can turn their wildest ideas into reality with lightning
+            speed.
           </p>
           <p>
             As a web developer, mobile app developer, and fervent advocate for
@@ -52,7 +52,7 @@ export default async function about() {
             life they love.
           </p>
           <p>
-            Join me at DTech as we dive headfirst into the exhilarating world of
+            Join me as we dive headfirst into the exhilarating world of
             technology, where learning, growing, and building are not just
             tasks, but exhilarating adventures. Together, let's embrace the
             boundless opportunities of technology, simplify our lives, and pave

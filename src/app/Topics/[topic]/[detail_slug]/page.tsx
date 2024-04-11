@@ -36,8 +36,8 @@ export default async function Detail({ params: { topic, detail_slug } }: any) {
         </h2>
         <hr />
         <div className="">
-          <section className="bg-blue-100 pb-9">
-            <section className="float-right bg-red-100 z-10 flex-none w-0 hover:w-auto ease-linear duration-1000 p-3 truncate transition-all">
+          <section className="bg-blue-100 pb-9 relative">
+            <section className="z-30 float-right bg-red-100 flex-none w-0 hover:w-auto  hover:absolute  hover:top-0  hover:right-0 ease-linear duration-1000 p-3 truncate transition-all">
               <h2 className="mb-2 text-center text-xl">CyberSecurity Topics</h2>
               <hr className="h-[2px] bg-black " />
               {sub_topics.map((sub_topic: any) => {
@@ -46,7 +46,9 @@ export default async function Detail({ params: { topic, detail_slug } }: any) {
                     key={sub_topic.id}
                     href={`/Topics/${sub_topic.topic}/${sub_topic.slug}`}
                   >
-                    <div className="mb-3">Home</div>
+                    <div className="mb-3 capitalize">
+                      {sub_topic.slug.replace(/-/g, " ")}
+                    </div>
                   </Link>
                 );
               })}
@@ -67,7 +69,7 @@ export default async function Detail({ params: { topic, detail_slug } }: any) {
               );
             })}
             <br />
-            <div>
+            {/* <div>
               <img
                 src="fish.jpeg"
                 className="float-left m-3 w-32 h-32"
@@ -88,7 +90,7 @@ export default async function Detail({ params: { topic, detail_slug } }: any) {
                 from repetition, injected humour, or non-characteristic words
                 etc.
               </p>
-            </div>
+            </div> */}
           </section>
         </div>
 
@@ -124,38 +126,15 @@ export default async function Detail({ params: { topic, detail_slug } }: any) {
               </div>
             );
           })}
-          <div className="px-2">
+
+          {/* <div className="p-2">
             <div className="underline underline-offset-3">@DDHaven</div>
             <div>
               The hole cannot be codded in this form because the end has to meet
               the beginnin g and the fish ha s to grwo to be a big boy cause the
               end is near and the hen is lose
             </div>
-          </div>{" "}
-          <div className="p-2">
-            <div className="underline underline-offset-3">@DDHaven</div>
-            <div>
-              The hole cannot be codded in this form because the end has to meet
-              the beginnin g and the fish ha s to grwo to be a big boy cause the
-              end is near and the hen is lose
-            </div>
-          </div>{" "}
-          <div className="p-2">
-            <div className="underline underline-offset-3">@DDHaven</div>
-            <div>
-              The hole cannot be codded in this form because the end has to meet
-              the beginnin g and the fish ha s to grwo to be a big boy cause the
-              end is near and the hen is lose
-            </div>
-          </div>
-          <div className="p-2">
-            <div className="underline underline-offset-3">@DDHaven</div>
-            <div>
-              The hole cannot be codded in this form because the end has to meet
-              the beginnin g and the fish ha s to grwo to be a big boy cause the
-              end is near and the hen is lose
-            </div>
-          </div>
+          </div> */}
         </div>
         <div className="min-w-36  bg-transparent">
           <div

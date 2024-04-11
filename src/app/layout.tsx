@@ -7,7 +7,7 @@ import getTopics from "@/api_requests/get_topics";
 import My_nav from "@/components/My_nav/My_nav";
 
 // import ""
-import { FaInstagramSquare, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaInstagramSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,9 +46,22 @@ export default async function RootLayout({
             <footer className="flex justify-between items-center bg-yellow-100 p-3">
               <span className="flex text-center">Contact me @</span>
               <span className="flex  justify-between">
-                <FaInstagramSquare size={30} className="inline-block mx-5" />
-                <FaLinkedin size={30} className="inline-block mx-5" />
-                <FaFacebook size={30} className="inline-block mx-5" />
+                <a target="_blank" href="https://www.instagram.com/_sir_dd_/">
+                  <FaInstagramSquare size={30} className="inline-block mx-5" />
+                </a>
+
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/destiny-abhuluimen-20bb3726a"
+                >
+                  <FaLinkedin size={30} className="inline-block mx-5" />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/HavenDd51034?t=yNoSFxCjTg_Ilrm3QJa1SA&s=35"
+                >
+                  <FaTwitterSquare size={30} className="inline-block mx-5" />
+                </a>
               </span>
             </footer>
           </section>

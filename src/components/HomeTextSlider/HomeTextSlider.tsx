@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from "react";
 
 function HomeTextSlider() {
-  const text1 = `vnvjvnsdjvnjsdv vkjnsnvs jsdnjv snvjsvosdvo jnvjsdnvjnsdjv jnvdsnvnd jdsnvjsdnvjnds jvdjnsdjnv eejnccand jnajajcn jknacanc nacacn nacjacn nacancnac acnjancojsa jnjcan jnnjn kjjn`;
+  const text1 = `Welcome to the Hub of Innovation! Dive into a world where technology meets imagination. From coding marvels to digital wonders, we're here to fuel your passion for all things tech. Join us as we explore, create, and redefine what's possible in the ever-evolving realm of technology.`;
 
-  const text2 = `ncn cpokaopc cioad nocnz onodoi nvoidov onvodv odnvodsv donvoidvi ovnkdnv vnodn odnvjdnsv vndjdnv dvodvnjdvn jvndjndv jnvjdnv jdvnndv dnvndv sdvnosdn jvnjdsnv oivdnoisdnv jnvndjnv vnjsdnv jvdnjsdnv vdjdvnjdsnv vjkdnjsdv dvsjdvdv jvdsndv dvjdvnd vddsvjds vjndsvn vdndnv dv ksens nfvnf jfnf fb`;
+  const text2 = `Step into the World of Web Wizards! Ready to unleash your creativity and build stunning websites that stand out from the crowd? Join us on a journey through the vibrant landscape of web development. From HTML to JavaScript, we'll equip you with the skills and knowledge to craft captivating digital experiences that leave a lasting impression.`;
 
-  const text3 = `vndoj blkmtj yopyjho iovgjiorejg ognorg non svjoi nroo vdfnsfvs oisjdo oinov sdvnsodfov onoso novnso oingoisn oinovsio ionoinb onovn onvowneo oinons sdvnonv neoesn ongweo onwone oiwneon oeewnv owenvonw weo n weoinoewn oeno einweew oewn vowev`;
+  const text3 = `Embark on a Journey of Trading Triumphs! Imagine a world where your money works for you while you sleep. That's the power of automated trading! With our expert guidance and cutting-edge algorithms, we'll show you how to navigate the exciting realm of financial markets, turning data into dollars and dreams into reality.`;
 
   const allText = [text1, text2, text3];
   //, text2,

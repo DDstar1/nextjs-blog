@@ -25,9 +25,9 @@ export default async function Topics({ params: { topic } }: any) {
                 >
                   <figure className="border-gray-300 flex flex-col p-5 mx-auto hover:scale-105">
                     <Image
-                      className="grayscale-[50%] -z-10 w-full aspect-square"
+                      className="grayscale-[50%] -z-10"
                       width={200}
-                      height={50}
+                      height={200}
                       alt="Mountains"
                       src={sub_topic.image_url}
                       style={{
@@ -42,33 +42,12 @@ export default async function Topics({ params: { topic } }: any) {
               );
             })}
 
-            <figure className="border-gray-300 flex flex-col p-5 max-w-220 mx-auto">
+            {/* <figure className="border-gray-300 flex flex-col p-5 max-w-220 mx-auto">
               <img className="w-32 h-32" src="" />
               <figcaption className="bg-gray-800 text-white italic p-3 text-center">
                 An elephant at sunset
               </figcaption>
-            </figure>
-
-            <figure className="border-gray-300 flex flex-col p-5 max-w-220 mx-auto">
-              <img className="w-32 h-32" src="" />
-              <figcaption className="bg-gray-800 text-white italic p-3 text-center">
-                An elephant at sunset
-              </figcaption>
-            </figure>
-
-            <figure className="border-gray-300 flex flex-col p-5 max-w-220 mx-auto">
-              <img className="w-32 h-32" src="" />
-              <figcaption className="bg-gray-800 text-white italic p-3 text-center">
-                An elephant at sunset
-              </figcaption>
-            </figure>
-
-            <figure className="border-gray-300 flex flex-col p-5 max-w-220 mx-auto">
-              <img className="w-32 h-32" src="" />
-              <figcaption className="bg-gray-800 text-white italic p-3 text-center">
-                An elephant at sunset
-              </figcaption>
-            </figure>
+            </figure> */}
           </div>
         </>
       ) : (

@@ -31,7 +31,7 @@ function My_nav({ django_topics }: any) {
     <>
       <nav className="fixed flex items-center h-screen z-40 md:!relative md:!pl-32  md:!bg-gray-200 md:!h-[unset]">
         <div
-          className={`md:!fixed md:!max-w-full md:!top-1/2 md:!-translate-y-1/2 left-0 w-32 overflow-hidden transition-all ease-linear transform origin-left duration-[500ms] ${
+          className={`md:!fixed md:!max-w-full md:!top-1/2 md:!-translate-y-1/2 left-0 w-32 overflow-hidden transition-all ease-linear transform origin-left duration-[200ms] ${
             navOpen ? "max-w-full" : "max-w-0"
           }`}
         >

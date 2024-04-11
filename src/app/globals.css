@@ -32,6 +32,9 @@
   h3 {
     @apply text-lg font-medium italic text-center;
   }
+  p {
+    @apply my-2 first-letter:ml-8;
+  }
   .aboutFigure {
     @apply border-gray-300 flex flex-col p-5 w-[300px];
   }

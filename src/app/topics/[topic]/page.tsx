@@ -34,7 +34,7 @@ export default async function Topics({ params: { topic } }: any) {
                         objectFit: "cover",
                       }}
                     />
-                    <figcaption className="bg-gray-800 text-white italic p-3 text-center">
+                    <figcaption className="bg-gray-800 text-white italic p-3 text-center w-[200px]">
                       {sub_topic.name}
                     </figcaption>
                   </figure>{" "}
